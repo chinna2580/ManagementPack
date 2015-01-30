@@ -1,0 +1,23 @@
+ <IntervalSeconds>60</IntervalSeconds>
+  <SyncTime />
+  <ScriptName>Service.ps1</ScriptName>
+  <ScriptBody>$IncludeFileContent/Service.ps1$</ScriptBody>
+  <Parameters>
+    <Parameter>
+      <Name>sourceId</Name>
+      <Value>$MPElement$</Value>
+    </Parameter>
+    <Parameter>
+      <Name>managedEntityId</Name>
+      <Value>$Target/Id$</Value>
+    </Parameter>
+    <Parameter>
+      <Name>ServiceName</Name>
+      <Value>$Target/Property[Type="Krithika.Service"]/ServiceName$</Value>
+    </Parameter>
+    <Parameter>
+      <Name>computerName</Name>
+      <Value>$Target/Host/Property[Type="Windows!Microsoft.Windows.Computer"]/PrincipalName$</Value>
+    </Parameter>
+  </Parameters>
+  <TimeoutSeconds>300</TimeoutSeconds>
